@@ -1,0 +1,31 @@
+nav {
+    background-color: navy;
+    color:white;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1%;
+    font-style: none;
+}
+
+ul{
+    list-style: none;
+    display:flex;
+    gap: 1rem;
+}
+
+li:hover{
+    background-color: blue;
+}
+
+a{
+    text-decoration: none;
+}
+
+#title{
+    font-size: 2rem;
+}
+
+#title:hover{
+    background-color: blue;
+}

@@ -1,23 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+// import './App.css';
+import NavBar from "./NavBar";
+import HomeScreen from './pages/HomeScreen';
+import Experiences from './pages/Experiences';
+import Education from './pages/Education';
+import Hobbies from './pages/Hobbies'
 
 function App() {
+  let component;
+  switch (window.location.pathname) {
+    case "/":
+      component = <HomeScreen/>
+      break
+    case "/Hobbies":
+      component = <Hobbies/>
+      break
+    case "/Experiences":
+      component = <Experiences/>
+      break
+    case "/Education":
+      component = <Education/>
+      break
+
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+
+      <NavBar/>
+
+      {component}
+
+      <footer className="foot">
+        <h2>Contact me:</h2>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          416-677-1308 | j5yip@uwaterloo.ca | <a href='http://www.linkedin.com/in/jasmine-yip-1138j'>Linkedin</a>
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      </footer>
+      
     </div>
   );
 }
